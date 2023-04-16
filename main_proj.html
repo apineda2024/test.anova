@@ -1,0 +1,575 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=IM Fell DW Pica' rel='stylesheet'>
+    <style>
+    body {
+        font-family: 'IM Fell DW Pica';
+    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCF</title>
+    <link rel="stylesheet" type="text/css" href="style-1.css">
+    <style>
+        /* CSS styles here */
+        /* Global Styles */
+
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body {
+font-family: 'IM Fell DW Pica';
+font-size: 16px;
+line-height: 1.5;
+color: #333;
+
+
+}
+a {
+text-decoration: none;
+}
+/* Header Section */
+#banner {
+background: linear-gradient(to bottom, rgba(210, 180, 140), rgba(210, 180, 140)), url('banner.jpg');
+background-size: cover;
+background-position: center;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+#banner h1 {
+font-size: 4rem;
+margin-bottom: 1rem;
+color: #fff;
+text-shadow: 1px 1px #000;
+}
+#banner p {
+font-size: 1.5rem;
+margin-bottom: 2rem;
+color: #fff;
+text-shadow: 1px 1px #000;
+}
+/* About Section */
+#about {
+padding: 4rem;
+background-color: #d2b48c;
+}
+#about h2 {
+font-size: 2.5rem;
+margin-bottom: 2rem;
+text-align: center;
+}
+#about p {
+font-size: 1.2rem;
+line-height: 1.8;
+margin-bottom: 2rem;
+text-align: center;
+}
+/* Application Section */
+#application {
+padding: 4rem;
+background-color: #d2b48c;
+}
+#application h2 {
+font-size: 2.5rem;
+margin-bottom: 2rem;
+text-align: center;
+}
+#application ul {
+list-style: none;
+margin-bottom: 2rem;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+#application li {
+margin: 1rem;
+padding: 1rem;
+background-color: #d2b48c;
+border-radius: 5px;
+box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+#application li:hover {
+background-color: #e0e0e0;
+cursor: pointer;
+}
+/* Contact Section */
+#contact {
+padding: 4rem;
+background-color: #d2b48c;
+}
+#contact h2 {
+font-size: 2.5rem;
+margin-bottom: 2rem;
+text-align: center;
+}
+form {
+display: flex;
+flex-direction: column;
+}
+label {
+font-size: 1.2rem;
+margin-bottom: 1rem;
+}
+input,
+textarea {
+padding: 1rem;
+margin-bottom: 2rem;
+border: none;
+border-radius: 5px;
+box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+font-size: 1.2rem;
+}
+input:focus,
+textarea:focus {
+outline: none;
+box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+button[type="submit"] {
+background-color: #333;
+color: #fff;
+padding: 1rem;
+border: none;
+border-radius: 5px;
+font-size: 1
+
+
+}
+/* Footer Section */
+#footer {
+background-color: #333;
+color: #fff;
+padding: 2rem;
+text-align: center;
+}
+#footer p {
+font-size: 1.2rem;
+line-height: 1.5;
+}
+#footer a {
+color: #fff;
+}
+/* Button Styles */
+.btn {
+display: inline-block;
+padding: 1rem 2rem;
+font-size: 1.2rem;
+background-color: #333;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: all 0.2s ease;
+}
+.btn:hover {
+background-color: #444;
+}
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+#banner h1 {
+font-size: 3rem;
+}
+#banner p {
+font-size: 1.2rem;
+}
+#about h2 {
+font-size: 2rem;
+}
+#about p {
+font-size: 1rem;
+}
+#application h2 {
+font-size: 2rem;
+}
+#application li {
+margin: 0.5rem;
+padding: 0.5rem;
+}
+#contact h2 {
+font-size: 2rem;
+}
+input,
+textarea {
+font-size: 1rem;
+}
+.btn {
+font-size: 1rem;
+padding: 0.5rem 1rem;
+}
+}
+/* Navigation Bar */
+nav {
+background-color: #333;
+color: #fff;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem;
+}
+nav ul {
+list-style: none;
+display: flex;
+}
+nav ul li {
+margin-left: 2rem;
+}
+nav ul li a {
+color: #fff;
+font-size: 1.2rem;
+text-decoration: none;
+transition: all 0.2s ease;
+}
+nav ul li a:hover {
+text-decoration: underline;
+}
+/* Section Headings */
+.section-heading {
+text-align: center;
+margin-bottom: 2rem;
+}
+.section-heading h2 {
+font-size: 3rem;
+font-weight: bold;
+text-transform: uppercase;
+}
+.section-heading p {
+font-size: 1.2rem;
+font-style: italic;
+color: #999;
+}
+/* Button Groups */
+.btn-group {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 2rem;
+}
+.btn-group .btn {
+margin: 0 1rem;
+}
+/* Testimonial Section */
+#testimonial {
+padding: 4rem;
+background-color: #f5f5f5;
+}
+#testimonial h2 {
+font-size: 2.5rem;
+margin-bottom: 2rem;
+text-align: center;
+}
+#testimonial .testimonial-card {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 2rem;
+background-color: #fff;
+box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+border-radius: 5px;
+margin-bottom: 2rem;
+}
+#testimonial .testimonial-card img {
+width: 100px;
+height: 100px;
+object-fit: cover;
+border-radius: 50%;
+margin-bottom: 1rem;
+}
+#testimonial .testimonial-card p {
+font-size: 1.2rem;
+line-height: 1.8;
+text-align: center;
+margin-bottom: 2rem;
+}
+#testimonial .testimonial-card h3 {
+font-size: 1.5rem;
+font-weight: bold;
+margin-bottom: 1rem;
+}
+/* Pricing Section */
+#pricing {
+padding: 4rem;
+background-color: #fff;
+}
+#pricing h2 {
+font-size: 2.5rem;
+margin-bottom: 2rem;
+text-align: center;
+}
+.pricing-table {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.pricing-table .plan {
+padding: 2rem;
+margin: 0 1rem;
+background-color: #f5f5f5;
+box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+border-radius: 5px;
+}
+.pricing-table .plan h3 {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+}
+.pricing-table .plan ul {
+list-style: none;
+margin-bottom: 2rem;
+text-align: center;
+}
+.pricing-table .plan ul li {
+font-size: 1.2rem;
+margin-bottom: 1rem;
+}
+.pricing-table .plan button {
+margin-top: 2rem;
+}
+/* Responsive Styles */
+@media only screen and (max-width: 576px) {
+#banner h1 {
+font-size: 2rem;
+}
+#banner p {
+font-size: 1rem;
+}
+#about h2 {
+font-size: 1.5rem;
+}
+#about p {
+font-size: 1rem;
+}
+#application h2 {
+font-size: 1.5rem;
+}
+#application li {
+margin: 0.5rem;
+padding: 0.5rem;
+font-size: 0.8rem;
+}
+#contact h2 {
+font-size: 1.5rem;
+}
+input,
+textarea {
+font-size: 1rem;
+padding: 0.5rem;
+}
+.btn {
+font-size: 1rem;
+padding: 0.5rem 1rem;
+}
+}
+    </style>
+    <script>                                                   
+      document.addEventListener('DOMContentLoaded', function() {
+        const clearButton = document.getElementById("clear");
+        const inputFields = document.querySelectorAll("input[type='text']");
+
+        clearButton.addEventListener("click", () => {
+            inputFields.forEach((input) => (input.value = ""));
+        });
+        });
+                            
+                            
+    </script>
+</head>
+<body>
+
+    <!-- HTML content here -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCF</title>
+<link rel="stylesheet" type="text/css" href="style-1.css">
+</head>
+<body>
+
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="file:///C:/Users/James/OneDrive/Pictures/Documents/About_PCF.html">About PCF</a></li>
+<li><a href="#">Application</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+<main>
+<section id="banner">
+  <html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCF</title>
+<style>
+    .popup {
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: none;
+        }
+        .popup-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888888;
+            width: 30%;
+            font-weight: bolder;
+        }
+        .popup-content button {
+            display: block;
+            margin: 0 auto;
+        }
+        .show {
+            display: block;
+        }
+        h1 {
+            color: green;
+        }
+button {
+background-color: #4CAF50;
+border: none;
+color: white;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 10px;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #3e8e41;
+}
+
+h1 {
+text-align: center;
+margin-top: 50px;
+}
+
+.button-container {
+display: flex;
+justify-content: center;
+align-items: flex-end;
+margin-top: 50px;
+}
+</style>
+<script>
+
+function showMessage1() {
+alert('Pick a model type')
+;
+}
+
+function showMessage2() {
+alert('Car mileage');
+}
+
+function showMessage3() {
+alert('Select a gas mile range');
+}
+
+function showMessage4() {
+alert('Searched Cleared!');
+}
+
+function showMessage5() {
+alert("Can't find what your looking for maybe this will help :)");
+}
+
+
+</script>
+</head>
+<body>
+<h1>Welcome To The Perfect Car Finder!</h1>
+</body>
+   <p>This application finds your perfect car with only a few simple questions.</p>
+   <a href="#" class="btn">Learn More</a>
+</section>
+
+<section id="about">
+   <h2>About Us</h2>
+   <p>After a puzzling encounter with a messy API dataset, we switched to a clean and formatted CSV file. After redoing code and not using chatgpt to answer our inquiries we finally came upon the product presented</p>
+   <a href="https://docs.google.com/presentation/d/1m6skINKkYYWssLUy0a6V5OS78FGi4cLTI4iX0G68JnI/edit" class="btn">More About Us</a>
+</section> 
+
+<section id="application">
+<h2>Application</h2>
+<form>
+<div class="form-group">
+<label for="car-price">Select Car Price:</label>
+<select id="car-price" name="car-price">
+<option value="2000-8000">$2,000 to $8,000</option>
+<option value="9000-16000">$9,000 to $16,000</option>
+<option value="17000-35000">$17,000 to $35,000</option>
+</select>
+</div>
+<div class="form-group">
+<label for="car-mileage">Select MPG range:</label>
+<select id="car-mpg" name="car-mpg">
+<option value="5-15">5 to 15 MPG </option>
+<option value="16-23">6 to 23 MPG </option>
+<option value="24 to 40">24 to 40 MPG </option>
+</div>
+<div class="form-group">
+<label for="body_type">Select body type:</label>
+<select id="body_type" name="body_type">
+<option value="1">Hatchback</option>
+<option value="2">Sedan</option>
+<option value="3">Convertible</option>
+</div>
+<button id="submitButton">Submit</button>
+<button type="button" id="clear">Clear</button>
+</form>
+</section>
+<div id="myPopup" class="popup">
+    <div class="popup-content">
+        <h1 style="color:rgb(191, 183, 76);">
+              Honda Accord !
+          </h1>
+        <p>This was your chosen car!</p>
+        <button id="closePopup">
+              Close
+          </button>
+    </div>
+</div>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<form action="submit-form.php" method="post">
+<label for="name">Name</label>
+<input type="text" id="name" name="name" required>
+
+<label for="email">Email</label>
+<input type="email" id="email" name="email" required>
+
+<label for="message">Message</label>
+<textarea id="message" name="message" required></textarea>
+
+<button type="submit" class="btn">Send Message</button>
+</form>
+</section>
+
+<footer id="footer">
+<p>&copy; PCF</p>
+</footer>
+<script src="script.js">
+    
+</script>
+</body>
+</html>
+
+</body>
+</html>
